@@ -1,0 +1,9 @@
+.header {
+  grid-area: h;
+
+  background-color: greenyellow;
+}
+
+.logo {
+  height: 60px;
+}

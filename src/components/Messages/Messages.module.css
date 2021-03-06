@@ -1,0 +1,21 @@
+.dialogs {
+  display: flex;
+}
+
+.dialogs__left {
+  border-right: 2px solid white;
+  padding: 0 20px;
+}
+
+.dialogs__item {
+  color: brown;
+  text-decoration: none;
+}
+
+.dialogs__right {
+  padding: 0 20px;
+}
+
+.messages__item {
+  color: blueviolet;
+}

@@ -1,0 +1,17 @@
+.nav {
+  grid-area: n;
+
+  background-color: greenyellow;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.item {
+  display: block;
+  color: azure;
+  text-decoration: none;
+}
+
+.item.active {
+  color: red;
+}

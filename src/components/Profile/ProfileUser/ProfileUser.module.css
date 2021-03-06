@@ -1,0 +1,16 @@
+.profileUser {
+  display: flex;
+}
+
+.title {
+  margin: 0;
+}
+
+.img{
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profileUser span {
+  display: block;
+}

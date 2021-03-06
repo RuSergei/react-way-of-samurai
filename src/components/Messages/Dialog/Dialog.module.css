@@ -1,0 +1,21 @@
+.dialog {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.dialog__link {
+  text-decoration: none;
+}
+
+.active {
+  color: red;
+}
+
+.images {
+  margin-right: 5px;
+}
+
+.img{
+  height: 20px;
+  border-radius: 50%;
+}
