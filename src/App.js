@@ -17,18 +17,11 @@ function App(props) {
       <Nav />
       <div className="app-wrapper-content">
         <Route path='/profile'
-          render={() => <Profile
-            // store={props.store}
-            // profilePage={props.store.getState().profilePage} 
-            // dispatch={props.dispatch} 
-            />
+          render={() => <Profile />
             } />
         <Route path='/messages'
           render={() => <MessagesContainer
-              store={props.store}
-            // messagesPage={props.store.getState().messagesPage}
-            // dispatch={props.store.dispatch} 
-            />} />
+              store={props.store} />} />
         <Route path='/news' component={News} />
         <Route path='/music' component={Music} />
         <Route path='/setting' component={Setting} />

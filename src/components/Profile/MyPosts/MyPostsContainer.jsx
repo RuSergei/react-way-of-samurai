@@ -1,8 +1,5 @@
-// import classes from './MyPosts.module.css';
-// import Post from './Post/Post';
 import React from 'react';
 import { addPostActionCreator, updateNewPostActionCreator } from '../../../redux/profile-reducer';
-// import StoreContext from '../../../StoreContext';
 import MyPosts from './MyPosts';
 import { connect } from 'react-redux';
 

@@ -5,18 +5,13 @@ import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileUser from './ProfileUser/ProfileUser';
 import ProfileBg from './ProfileBg/ProfileBg';
 
-function Profile(props) {
+function Profile() {
 
   return (
     <div className={classes.profile}>
       <ProfileBg />
       <ProfileUser />
-      <MyPostsContainer
-      // store={props.store}
-      //  postData={props.store.getState().profilePage.postData}
-      //  newPostText={props.store.getState().profilePage.newPostText}
-      //  dispatch={props.dispatch} 
-      />
+      <MyPostsContainer />
     </div>
   );
 }

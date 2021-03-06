@@ -24,15 +24,19 @@ const messagesReducer = (state = initialState, action) => {
         id: 4,
         message: state.newMessageText
       }; 
-      state.messageData.push(newMessage);
-      state.newMessageText = '';
-      return state;
+
+      let stateCopy = {...state}
+      stateCopy.messageData = [...state.messageData];
+      stateCopy.messageData.push(newMessage);
+      stateCopy.newMessageText = '';
+      return stateCopy;
       
-    case UPDATE_NEW_MESSAGE_TEXT: 
-      state.newMessageText = action.newText;
-      return Object.assign({}, state, {
-        newMessageText: action.newText});
-    
+    case UPDATE_NEW_MESSAGE_TEXT: {
+      let stateCopy = {...state};
+      stateCopy.newMessageText = action.newText;
+      return stateCopy;
+    }
+
     default:
       return state; 
   } 
