@@ -6,13 +6,13 @@ import React from 'react';
 function Messages(props) {
   let dialogElement = props.dialogData.map(
     (dialog) => {
-      return <Dialog id={dialog.id} dialog={dialog.dialog} />
+      return <Dialog id={dialog.id} key={dialog.id} dialog={dialog.dialog} />
     }
   );
 
   let messageElement = props.messageData.map(
     (message) => {
-      return <Message message={message.message} />
+      return <Message message={message.message} key={message.id} />
     }
   );
 
