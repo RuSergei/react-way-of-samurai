@@ -1,0 +1,30 @@
+.usersCard {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 70px;
+}
+
+.right {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
