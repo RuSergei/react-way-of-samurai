@@ -28,3 +28,18 @@
   justify-content: space-between;
   flex-direction: column;
 }
+
+.pagesCountContainer {
+  width: 300px;
+  overflow: hidden;
+}
+
+.pageNumber {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.selectedPage {
+  color: tomato;
+  cursor: pointer;
+}
