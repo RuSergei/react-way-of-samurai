@@ -5,12 +5,12 @@ import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileUser from './ProfileUser/ProfileUser';
 import ProfileBg from './ProfileBg/ProfileBg';
 
-function Profile() {
+function Profile(props) {
 
   return (
     <div className={classes.profile}>
       <ProfileBg />
-      <ProfileUser />
+      <ProfileUser profile={props.profile} />
       <MyPostsContainer />
     </div>
   );
