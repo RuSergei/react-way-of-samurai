@@ -17,7 +17,7 @@ function App(props) {
       <Header />
       <Nav />
       <div className="app-wrapper-content">
-        <Route path='/profile'
+        <Route path='/profile/:userId?'
           render={() => <ProfileContainer />} />
         <Route path='/messages'
           render={() => <MessagesContainer />} />
