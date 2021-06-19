@@ -7,3 +7,15 @@
 .logo {
   height: 60px;
 }
+
+.loginBlock {
+  float: right;
+}
+
+.loginBlock a {
+  color: white;
+}
+
+.loginBlock a:hover {
+  color: rgb(250, 4, 4);
+}
