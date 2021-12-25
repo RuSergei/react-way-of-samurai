@@ -2,7 +2,8 @@ import React from 'react';
 import s from './Users.module.css';
 import userPhoto from '../../assets/img/user.jpg'
 import { NavLink } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import { usersAPI } from '../../api/api';
 
 function Users(props) {
 
@@ -35,33 +36,35 @@ function Users(props) {
                 {u.followed
                   ? <button onClick={() => {
 
-                    axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
-                      withCredentials: true,
-                      headers: {
-                        'API-KEY': '702b1871-d30f-4ccc-bead-85cd52841026'
-                      }
-                    })
-                      .then(response => {
+                    // axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
+                    //   withCredentials: true,
+                    //   headers: {
+                    //     'API-KEY': '702b1871-d30f-4ccc-bead-85cd52841026'
+                    //   }
+                    // })
+                    usersAPI.delUnfollow(u)
+                      .then(data => {
 
-                        if (response.data.resultCode === 0) {
+                        if (data.resultCode === 0) {
                           props.unfollow(u.id)
                         }
                       })
 
-                    props.unfollow(u.id)
+                    // props.unfollow(u.id)
 
                   }}>unfollow</button>
                   : <button onClick={() => {
 
-                    axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
-                      withCredentials: true,
-                      headers: {
-                        'API-KEY': '702b1871-d30f-4ccc-bead-85cd52841026'
-                      }
-                    })
-                      .then(response => {
+                    // axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
+                    //   withCredentials: true,
+                    //   headers: {
+                    //     'API-KEY': '702b1871-d30f-4ccc-bead-85cd52841026'
+                    //   }
+                    // })
+                    usersAPI.postFollowed(u)
+                      .then(data => {
 
-                        if (response.data.resultCode === 0) {
+                        if (data.resultCode === 0) {
                           props.follow(u.id)
                         }
                       })
