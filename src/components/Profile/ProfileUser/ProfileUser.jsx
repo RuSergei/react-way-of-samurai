@@ -19,6 +19,7 @@ function ProfileUser(props) {
         <span>City: Minsk</span>
         <span>Education: BSU'11</span>
         <span>VK: {props.profile.contacts.vk}</span>
+        <span>Status: {props.profile.status}</span>
       </div>
     </div>
   );

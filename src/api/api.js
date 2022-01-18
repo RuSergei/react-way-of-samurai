@@ -17,15 +17,15 @@ export const usersAPI = {
       })
   },
 
-  delUnfollow(u) {
-    return instance.delete(`follow/${u.id}`)
+  unfollow(userId) {
+    return instance.delete(`follow/${userId}`)
       .then(response => {
         return response.data;
       })
   },
 
-  postFollowed(u) {
-    return instance.post(`follow/${u.id}`)
+  follow(userId) {
+    return instance.post(`follow/${userId}`)
       .then(response => {
         return response.data;
       })
@@ -36,7 +36,7 @@ export const usersAPI = {
       .then(response => {
         return response.data;
       })
-  }
+  },
 
   // getProfile(userId = 2) {
   //   // debugger

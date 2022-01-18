@@ -36,30 +36,32 @@ function Users(props) {
                 {u.followed
                   ? <button disabled={props.followingInProgress.some( id => id === u.id )} onClick={() => {
                     
-                    props.toggleFollowingProgress(true, u.id);
+                    props.unfollow(u.id);
 
-                    usersAPI.delUnfollow(u)
-                      .then(data => {
-                        if (data.resultCode === 0) {
-                          props.unfollow(u.id)
-                        }
+                    // usersAPI.unfollow(u)
+                    //   .then(data => {
+                    //     if (data.resultCode === 0) {
+                    //       props.unfollow(u.id);
+                    //     };
 
-                        props.toggleFollowingProgress(false, u.id);
-                      })
+                    //     props.toggleFollowingProgress(false, u.id);
+                    //   });
 
                   }}>unfollow</button>
                   : <button disabled={props.followingInProgress.some( id => id === u.id )} onClick={() => {
                     
-                    props.toggleFollowingProgress(true, u.id);
+                    props.follow(u.id);
 
-                    usersAPI.postFollowed(u)
-                      .then(data => {
-                        if (data.resultCode === 0) {
-                          props.follow(u.id)
-                        }
+                    // props.toggleFollowingProgress(true, u.id);
 
-                        props.toggleFollowingProgress(false, u.id);
-                      })
+                    // usersAPI.follow(u.id)
+                    //   .then(data => {
+                    //     if (data.resultCode === 0) {
+                    //       props.follow(u.id)
+                    //     }
+
+                    //     props.toggleFollowingProgress(false, u.id);
+                    //   })
 
                   }}>follow</button>}
               </div>
